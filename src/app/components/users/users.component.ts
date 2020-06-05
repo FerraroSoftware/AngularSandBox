@@ -14,6 +14,7 @@ export class UsersComponent implements OnInit {
   showExtended: boolean = true;
   loaded: boolean = false;
 
+  enableAdd: boolean = true;
 
   constructor() { }
 
