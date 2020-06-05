@@ -31,7 +31,8 @@ export class UsersComponent implements OnInit {
              street: '234 main st',
              city: 'orlando',
              state: 'fl'
-          }
+          },
+          image: 'http://lorempixel.com/600/600/people/3'
         },
         {
         firstName: 'Kait',
@@ -41,7 +42,8 @@ export class UsersComponent implements OnInit {
            street: '455 donald st',
            city: 'boston',
            state: 'ma'
-        }
+        }, 
+        image: 'http://lorempixel.com/600/600/people/2'
         },
         {
         firstName: 'Bobbie',
@@ -51,7 +53,8 @@ export class UsersComponent implements OnInit {
           street: '231 sander st',
           city: 'newyork',
           state: 'ny'
-        }
+        },
+        image: 'http://lorempixel.com/600/600/people/1'
         }
       ];
 
@@ -95,19 +98,19 @@ export class UsersComponent implements OnInit {
     // Swap the logic so it doesnt show the age and address 
     this.showExtended = true;
 
-    this.addUser(
-      {
-        firstName: 'Tony',
-        lastName: 'Montana'
-        // Lets make these optional, look at users.ts in models 
-        // age: 21,
-        // address: {
-        //   street: '33 sander st',
-        //   city: 'bronx',
-        //   state: 'ny'
-        // }
-      }
-    );
+    // this.addUser(
+    //   {
+    //     firstName: 'Tony',
+    //     lastName: 'Montana'
+    //     // Lets make these optional, look at users.ts in models 
+    //     // age: 21,
+    //     // address: {
+    //     //   street: '33 sander st',
+    //     //   city: 'bronx',
+    //     //   state: 'ny'
+    //     // }
+    //   }
+    // );
   }
 
 
