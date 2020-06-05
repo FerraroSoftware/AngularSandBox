@@ -13,8 +13,8 @@ export class UsersComponent implements OnInit {
   users: User[];
   showExtended: boolean = true;
   loaded: boolean = false;
-
   enableAdd: boolean = true;
+  currentClasses = {};
 
   constructor() { }
 
@@ -114,6 +114,7 @@ export class UsersComponent implements OnInit {
     //     // }
     //   }
     // );
+    this.setCurrentClasses();
   }
 
 
@@ -121,7 +122,12 @@ export class UsersComponent implements OnInit {
     this.users.push(user);
   }
 
-
+  setCurrentClasses() {
+    this.currentClasses = {
+      'btn-success': this.enableAdd,
+      'big-text': this.showExtended
+    }
+  }
 
 
 
