@@ -11,7 +11,7 @@ export class UsersComponent implements OnInit {
 
   // Grabbing users here to use in html
   users: User[];
-  showExtended: boolean = true;
+  showExtended: boolean = false;
   loaded: boolean = false;
   enableAdd: boolean = true;
   // currentClasses = {};
@@ -128,6 +128,10 @@ export class UsersComponent implements OnInit {
 
   addUser(user: User) {
     this.users.push(user);
+  }
+
+  fireEvent(e) {
+    
   }
 
   // setCurrentClasses() {
