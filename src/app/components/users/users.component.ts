@@ -11,7 +11,7 @@ export class UsersComponent implements OnInit {
 
   // Grabbing users here to use in html
   users: User[];
-  showExtended: boolean = false;
+  showExtended: boolean = true;
   loaded: boolean = false;
   enableAdd: boolean = true;
   // currentClasses = {};
@@ -36,7 +36,8 @@ export class UsersComponent implements OnInit {
         // image: 'http://lorempixel.com/600/600/people/3',
         isActive: true,
         // balance: 100,
-        registered: new Date('01/02/2020 08:30:00')
+        registered: new Date('01/02/2020 08:30:00'),
+        hide: true
       },
       {
         firstName: 'Kait',
@@ -50,7 +51,8 @@ export class UsersComponent implements OnInit {
         // image: 'http://lorempixel.com/600/600/people/2',
         isActive: false,
         // balance: 142,
-        registered: new Date('03/22/2020 08:39:00')
+        registered: new Date('03/22/2020 08:39:00'),
+        hide: true
       },
       {
         firstName: 'Bobbie',
@@ -64,7 +66,8 @@ export class UsersComponent implements OnInit {
         // image: 'http://lorempixel.com/600/600/people/1',
         isActive: true,
         // balance: 20,
-        registered: new Date('04/01/2020 08:33:00')
+        registered: new Date('04/01/2020 08:33:00'),
+        hide: true
       }
     ];
 
@@ -146,6 +149,10 @@ export class UsersComponent implements OnInit {
   //     'padding-top': this.showExtended ? '0' : '40px',
   //     'font-size': this.showExtended ? '' : '40px'
   //   }
+  // }
+  // toggleHide(user: User) {
+  //   // Be able to toggle back and forth
+  //   user.hide = !user.hide;
   // }
 
 
