@@ -9,11 +9,21 @@ import { User } from '../../models/User';
 })
 export class UsersComponent implements OnInit {
 
+  user: User = {
+    firstName: '',
+    lastName: '',
+    age: null,
+    address: {
+      street: '',
+      city: '',
+      state: ''
+    }
+  }
   // Grabbing users here to use in html
   users: User[];
   showExtended: boolean = true;
   loaded: boolean = false;
-  enableAdd: boolean = true;
+  enableAdd: boolean = false;
   showUserForm: boolean = false;
   // currentClasses = {};
   // currentStyles = {};
@@ -130,8 +140,24 @@ export class UsersComponent implements OnInit {
   }
 
 
-  addUser(user: User) {
-    this.users.push(user);
+  addUser() {
+
+    this.user.isActive = true;
+    this.user.registered = new Date();
+
+    // push to front of array instead and grab from user
+    this.users.unshift(this.user);
+
+    this.user = {
+      firstName: '',
+      lastName: '',
+      age: null,
+      address: {
+        street: '',
+        city: '',
+        state: ''
+      }
+    }
   }
 
   fireEvent(e) {
