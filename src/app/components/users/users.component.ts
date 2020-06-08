@@ -14,6 +14,7 @@ export class UsersComponent implements OnInit {
   showExtended: boolean = true;
   loaded: boolean = false;
   enableAdd: boolean = true;
+  showUserForm: boolean = false;
   // currentClasses = {};
   // currentStyles = {};
 
@@ -134,7 +135,13 @@ export class UsersComponent implements OnInit {
   }
 
   fireEvent(e) {
-    
+    console.log(e.type);
+    console.log(e.target.value);
+  }
+
+  onSumbit(e) {
+    console.log(123);
+    e.preventDefault();
   }
 
   // setCurrentClasses() {
