@@ -13,11 +13,12 @@ export class UsersComponent implements OnInit {
     firstName: '',
     lastName: '',
     age: null,
-    address: {
-      street: '',
-      city: '',
-      state: ''
-    }
+    email: ''
+    // address: {
+    //   street: '',
+    //   city: '',
+    //   state: ''
+    // }
   }
   // Grabbing users here to use in html
   users: User[];
@@ -38,12 +39,13 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'Mike',
         lastName: 'Ferrari',
-        age: 26,
-        address: {
-          street: '234 main st',
-          city: 'orlando',
-          state: 'fl'
-        },
+        email: 'ferrari@gmail.com',
+        // age: 26,
+        // address: {
+        //   street: '234 main st',
+        //   city: 'orlando',
+        //   state: 'fl'
+        // },
         // image: 'http://lorempixel.com/600/600/people/3',
         isActive: true,
         // balance: 100,
@@ -53,12 +55,13 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'Kait',
         lastName: 'VeeVee',
-        age: 22,
-        address: {
-          street: '455 donald st',
-          city: 'boston',
-          state: 'ma'
-        },
+        email: 'veevee@gmail.com',
+        // age: 22,
+        // address: {
+        //   street: '455 donald st',
+        //   city: 'boston',
+        //   state: 'ma'
+        // },
         // image: 'http://lorempixel.com/600/600/people/2',
         isActive: false,
         // balance: 142,
@@ -68,12 +71,13 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'Bobbie',
         lastName: 'Fili',
-        age: 50,
-        address: {
-          street: '231 sander st',
-          city: 'newyork',
-          state: 'ny'
-        },
+        email: 'fili@gmail.com',
+        // age: 50,
+        // address: {
+        //   street: '231 sander st',
+        //   city: 'newyork',
+        //   state: 'ny'
+        // },
         // image: 'http://lorempixel.com/600/600/people/1',
         isActive: true,
         // balance: 20,
@@ -140,30 +144,31 @@ export class UsersComponent implements OnInit {
   }
 
 
-  addUser() {
+  // addUser() {
 
-    this.user.isActive = true;
-    this.user.registered = new Date();
+  //   this.user.isActive = true;
+  //   this.user.registered = new Date();
 
-    // push to front of array instead and grab from user
-    this.users.unshift(this.user);
+  //   // push to front of array instead and grab from user
+  //   this.users.unshift(this.user);
 
-    this.user = {
-      firstName: '',
-      lastName: '',
-      age: null,
-      address: {
-        street: '',
-        city: '',
-        state: ''
-      }
-    }
-  }
+  //   this.user = {
+  //     firstName: '',
+  //     lastName: '',
+  //     email: ''
+  //     // age: null,
+  //     // address: {
+  //     //   street: '',
+  //     //   city: '',
+  //     //   state: ''
+  //     // }
+  //   }
+  // }
 
-  fireEvent(e) {
-    console.log(e.type);
-    console.log(e.target.value);
-  }
+  // fireEvent(e) {
+  //   console.log(e.type);
+  //   console.log(e.target.value);
+  // }
 
   onSumbit(e) {
     console.log(123);
